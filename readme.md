@@ -1,4 +1,4 @@
-# Rules engite
+# Rules engine
 Just a "take home" task after an interview
 
 ## Requirements & Features
@@ -7,15 +7,10 @@ Just a "take home" task after an interview
 - Create library that will be finding best matching rule and its output Value for set of filtering values:
 - Write Unit Tests
 - Taking into account that collection can store 1000+ records it should be performant enough.
-- Source code should be reusable as much as possible to support different Rules models (with different list of filters, different type for each filter).
-For instance, to write another set of strongly typed rules with Filters: Filter1(int), Filter2(bool), Filter3(string).
-
-```
-final URL resource = getClass().getClassLoader().getResource("SampleData.csv");
-final RulesSet actual = new RulesSet(new CsvLoader(resource.getFile()));
- ```
+- Source code should be reusable as much as possible to support different Rules models (with different list of filters, different type for each filter). For instance, to write another set of strongly typed rules with Filters: Filter1(int), Filter2(bool), Filter3(string).
 
 ## Classes description
+
 - `CsvLoader` reads rules set from *.csv file implements `RulesReader` interface for reusable approach
 - `PowerSet` implements filters subset decomposition
 - `Filter` is generic class. Different filter options should have different names
